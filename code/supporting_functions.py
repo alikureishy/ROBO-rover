@@ -83,6 +83,14 @@ def create_output_images(Rover):
       plotmap = np.zeros_like(Rover.worldmap)
       plotmap[:, :, 0] = obstacle
       plotmap[:, :, 2] = navigable
+      
+      roverpos_rgb = (255, 51, 255)
+      xpos = int(Rover.pos[0])
+      ypos = int(Rover.pos[1])
+      plotmap[ypos-2:ypos+2, xpos-2:xpos+2, 0] = roverpos_rgb[0]
+      plotmap[ypos-2:ypos+2, xpos-2:xpos+2, 1] = roverpos_rgb[1]
+      plotmap[ypos-2:ypos+2, xpos-2:xpos+2, 2] = roverpos_rgb[2]
+
       plotmap = plotmap.clip(0, 255)
       # Overlay obstacle and navigable terrain map with ground truth map
       map_add = cv2.addWeighted(plotmap, 1, Rover.ground_truth, 0.5, 0)
