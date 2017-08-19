@@ -1,16 +1,4 @@
-## Project: Search and Sample Return
-
----
-
-**The goals / steps of this project are the following:**
-
-**Training / Calibration**
-
-* Download the simulator and take data in "Training Mode"
-* Test out the functions in the Jupyter Notebook provided
-* Add functions to detect obstacles and samples of interest (golden rocks)
-* Fill in the `process_image()` function with the appropriate image processing steps (perspective transform, color threshold etc.) to get from raw images to a map.  The `output_image` you create in this step should demonstrate that your mapping pipeline works.
-* Use `moviepy` to process the images in your saved dataset with the `process_image()` function.  Include the video you produce as part of your submission.
+# Project: Search and Sample Return
 
 [//]: # (Image References)
 
@@ -23,11 +11,11 @@
 The goal was to have the rover explore at least 40% of the ground truth, with at least 60% fidelity. Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
 
 ---
-### Writeup / README
+## Writeup / README
 
 
 
-### Notebook Analysis
+## Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
 Here is an example of how to include an image in your writeup.
 
