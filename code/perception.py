@@ -126,6 +126,11 @@ def perception_step(rover):
     navigable = color_thresh_range(warped, rgb_thresh_low=(160, 160, 160))
     obstacles = (1-navigable) * mask
     gold = color_thresh_range(warped, rgb_thresh_low=(110, 110, 0), rgb_thresh_high=(255, 255, 50))
+
+    # Save thresholded images to the rover data:
+    rover.vantage_navigable[:,:] = navigable * 255
+    rover.vantage_obstacles[:,:] = obstacles * 255
+    rover.vantage_rocks[:,:] = gold * 255
     
     # 4) Update Rover.vision_image (this will be displayed on left side of screen)
         # Example: Rover.vision_image[:,:,0] = obstacle color-thresholded binary image

@@ -146,7 +146,11 @@ def create_output_images(Rover):
       pil_img.save(buff, format="JPEG")
       encoded_string1 = base64.b64encode(buff.getvalue()).decode("utf-8")
       
-      pil_img = Image.fromarray(Rover.vision_image.astype(np.uint8))
+      # This is what the camera on the rover sees in front + the thresholded views:
+      visionmap_top = np.dstack((Rover.vantage_obstacles, Rover.vantage_rocks, Rover.vantage_navigable))
+      visionmap_bottom = Rover.vision_image
+      visionmap = np.concatenate((visionmap_top, visionmap_bottom), axis=0)      
+      pil_img = Image.fromarray(visionmap.astype(np.uint8))
       buff = BytesIO()
       pil_img.save(buff, format="JPEG")
       encoded_string2 = base64.b64encode(buff.getvalue()).decode("utf-8")
