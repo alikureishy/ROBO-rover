@@ -1,14 +1,20 @@
-# Project: Search and Sample Return
-
 [//]: # (Image References)
 
 [image1]: ./misc/rover_image.jpg
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
 
-## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
+# Project: Search and Sample Return
 
-The goal was to have the rover explore at least 40% of the ground truth, with at least 60% fidelity. Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
+## Overview
+
+This is the first project of Udacity's Robotics Nanodegree program. It involves programming a rover to navigate unknown territory (presumably on another planet like Mars) that had a sprinkling of gold rocks.
+
+The primary [goal](https://review.udacity.com/#!/rubrics/916/view) was to have the rover explore at least 40% of the ground truth, with at least 60% fidelity, and to locate at least 1 gold rock in the process.
+
+The ultimate goal (still a work-in-progress) is to explore the majority of the ground truth, or at least enough to be able to locate and pick-up all 6 gold rocks in the process, and to then return to the original position where the rover had started out, all within a reasonable amount of time. This requires more advanced algorithms for improving exploration efficiency, seeking out and picking up rocks whenever visible, increasing mapping fidelity, and developing an efficient return strategy.
+
+Here I'll talk about the approach I took for the primary goal above -- what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
 
 ---
 ## Writeup / README
