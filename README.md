@@ -4,6 +4,8 @@
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
 
+[![image1][VehicleDetector1]](https://www.youtube.com/watch?v=m11V6zPe1YY "Click to see video on youtube")
+
 # Project: Search and Sample Return
 
 ## Overview
@@ -17,7 +19,9 @@ The ultimate goal (still a work-in-progress) is to explore the majority of the g
 Here I'll talk about the approach I took for the primary goal above -- what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.
 
 ---
-## Writeup / README
+## Implementation
+
+ 
 
 
 
