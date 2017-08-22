@@ -23,7 +23,7 @@ Here I'll talk about the approach I took for the primary goal above -- what tech
 
 ### Notebook Illustration
 
-Please see [here](https://github.com/safdark/ROBO-rover/blob/master/code/Rover_Project_Test_Notebook.html) for the notebook output and illustrations.
+Please see [here](https://github.com/safdark/ROBO-rover/blob/master/code/Rover_Project_Test_Notebook.ipynb) for the notebook output and illustrations.
 
 #### Perception
 Perception involves sensing and keeping track of the environment. The rover keeps track of 3 pieces of information:
