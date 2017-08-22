@@ -1,11 +1,10 @@
 [//]: # (Image References)
 
-[image1]: misc/rover_image.jpg
-[image2]: ./calibration_images/example_grid1.jpg
-[image3]: ./calibration_images/example_rock1.jpg 
+[RoverImage]: misc/rover_image.jpg
+[GridExample]: https://github.com/safdark/ROBO-rover/blob/master/calibration_images/example_grid1.jpg" "Front facing camera with grid"
+[GoldExample]: ./calibration_images/example_rock1.jpg 
 
-![alt text][image1]
-[![image1][VehicleDetector1]](https://www.youtube.com/watch?v=m11V6zPe1YY "Click to see video on youtube")
+[![GridExample][VehicleDetector1]](https://www.youtube.com/watch?v=m11V6zPe1YY "Click to autonomous rover video")
 
 # Project: Search and Sample Return
 
