@@ -21,8 +21,9 @@ Here I'll talk about the approach I took for the primary goal above -- what tech
 ---
 ## Implementation
 
-### Perception
+### Notebook Illustration
 
+#### Perception
 Perception involves sensing and keeping track of the environment. The rover keeps track of 3 pieces of information:
 - Navigable terrain
 - Obstacles
@@ -39,26 +40,21 @@ Though it could theoretically be possible to utilize just the world coordinates,
 
 Color thresholding is done for just 2 items -- the bright sand on which the rover is moving, and the golden rocks that it is eventually to pick up. Anything else in the line of sight that is not those two, is considered an obstacle. After conversion into the different coordinate systems, the pixels comprising these regions are then set with corresponding colors on the world map, for visualization, and that information is stored in the rover information object. The same information, expressed in the rover coordinate system, is also stored.
 
-### Decision
+#### Test video
+Please see the github repository for the output file (output/test_mapping.mp4).
 
-The decision step 
+### Rover In Action
+
+#### Perception
+
+The perception processing from the notebook section above is pretty much replicated here, except that here it is stored in a rover data object.
+
+#### Decision
+
+The decision step involves the following strategy:
 
 
-## Notebook Analysis
-#### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-Here is an example of how to include an image in your writeup.
 
 ![alt text][image1]
-
-#### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
-And another! 
-
-![alt text][image2]
-
-
-
-
-
-![alt text][image3]
 
 
