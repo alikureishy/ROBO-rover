@@ -1,9 +1,10 @@
 [//]: # (Image References)
 
-[image1]: ./misc/rover_image.jpg
+[image1]: misc/rover_image.jpg
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
 
+![alt text][image1]
 [![image1][VehicleDetector1]](https://www.youtube.com/watch?v=m11V6zPe1YY "Click to see video on youtube")
 
 # Project: Search and Sample Return
@@ -53,8 +54,32 @@ The perception processing from the notebook section above is pretty much replica
 
 The decision step involves the following strategy:
 
+'''
+There are 2 modes : 'forward' and 'stop'.
+If the rover is in 'forward' mode:
+   If there is an obstacle:
+      Break
+      Stop steering
+   Else:
+      If velocity is less than max:
+         Set throttle to max
+      Else:
+         Stop throttling
+      Steer toward mean of availalbe navigable angles
+Else if rover is in 'stop' mode:
+   If we're still moving:
+      Break
+      Stop steering
+   Else:
+      If there is an obstacle:
+         Steer right by 15 degrees
+      Else:
+         Set throttle to max
+         Steer towards mean of available navigable angles
+'''
+
+The above decision step is taken at each time step (i.e, frame), but it is often the case that an action (such as breaking, or accelerating, or steering) can be spread across multiple such decision steps. This actually simplifies the operation of the rover. The incremental approach to executing actions helps it to adapt those actions quickly to changes in the input.
 
 
-![alt text][image1]
 
 
