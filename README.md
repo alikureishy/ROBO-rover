@@ -24,6 +24,8 @@ Here I'll talk about the approach I took for the primary goal above -- what tech
 
 ### Notebook Illustration
 
+Please see [here](https://github.com/safdark/ROBO-rover/blob/master/code/Rover_Project_Test_Notebook.html) for the notebook output and illustrations.
+
 #### Perception
 Perception involves sensing and keeping track of the environment. The rover keeps track of 3 pieces of information:
 - Navigable terrain
@@ -59,7 +61,7 @@ Transform the rover-based navigation coordinates into polar coordinates:
 ```
 
 #### Test video
-Please see the github repository for the output file (output/test_mapping.mp4).
+Available [here](https://github.com/safdark/ROBO-rover/blob/master/output/test_mapping.mp4)
 
 ### Rover In Action
 
